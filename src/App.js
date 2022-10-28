@@ -24,16 +24,16 @@ function App() {
 }
 
 export default App; */
-
-import './App.css';
-import NavBar from '../src/components/NavBar.js';
-import ItemListContainer from '../src/components/ItemListContainer';
+import React from "react";
+import "./App.css";
+import NavBar from "../src/components/NavBar.js";
+import ItemListContainer from "../src/components/ItemListContainer";
 
 function App() {
   return (
     <div className="App">
-      <NavBar/>
-      <ItemListContainer greetings={"Sitio en construcción. Vuelve luego."}/>
+      <NavBar />
+      <ItemListContainer greetings={"Sitio en construcción. Vuelve luego."} />
     </div>
   );
 }
