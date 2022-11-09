@@ -28,12 +28,20 @@ import React from "react";
 import "./App.css";
 import NavBar from "../src/components/NavBar.js";
 import ItemListContainer from "../src/components/ItemListContainer";
+import { Route, Routes } from "react-router-dom";
+import { Home, Detail } from "./pages/index";
 
 function App() {
   return (
     <div className="App">
       <NavBar />
-      <ItemListContainer greetings={"Sitio en construcción. Vuelve luego."} />
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="detail" element={<Detail />} />
+        </Routes>
+        <ItemListContainer greetings={"Sitio en construcción. Vuelve luego."} />
+      </main>
     </div>
   );
 }
