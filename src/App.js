@@ -27,9 +27,9 @@ export default App; */
 import React from "react";
 import "./App.css";
 import NavBar from "../src/components/NavBar.js";
-import ItemListContainer from "../src/components/ItemListContainer";
+// import ItemListContainer from "../src/components/ItemListContainer";
 import { Route, Routes } from "react-router-dom";
-import { Home, Detail } from "./pages/index";
+import { Home, Products } from "./pages/index";
 
 function App() {
   return (
@@ -37,10 +37,11 @@ function App() {
       <NavBar />
       <main>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="detail" element={<Detail />} />
+          <Route exact path="/" element={<Home />} />
+          {/* <Route path="products" element={<Products />} /> */}
+          <Route exact path="/:productID" element={<Products />} />
         </Routes>
-        <ItemListContainer greetings={"Sitio en construcción. Vuelve luego."} />
+        {/* <ItemListContainer greetings={"Sitio en construcción. Vuelve luego."} /> */}
       </main>
     </div>
   );

@@ -1,12 +1,12 @@
 import React from "react";
 import "./styles.css";
 
-const Detail = () => {
+const Products = () => {
     return (
         <div>
-            <h1>Detail</h1>
+            <h1>Products</h1>
         </div>
     )
 }
 
-export default Detail;
+export default Products;
