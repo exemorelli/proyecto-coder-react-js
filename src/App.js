@@ -39,7 +39,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           {/* <Route path="products" element={<Products />} /> */}
-          <Route exact path="/:productID" element={<Products />} />
+          <Route exact path="product/:productID" element={<Products />} />
         </Routes>
         {/* <ItemListContainer greetings={"Sitio en construcción. Vuelve luego."} /> */}
       </main>
