@@ -29,7 +29,7 @@ import "./App.css";
 import NavBar from "../src/components/NavBar.js";
 // import ItemListContainer from "../src/components/ItemListContainer";
 import { Route, Routes } from "react-router-dom";
-import { Home, Products } from "./pages/index";
+import { ProductsPage, ProductDetail, Home } from "./pages/index";
 
 function App() {
   return (
@@ -38,8 +38,10 @@ function App() {
       <main>
         <Routes>
           <Route exact path="/" element={<Home />} />
+
+          <Route exact path="/products" element={<ProductsPage />} />
           {/* <Route path="products" element={<Products />} /> */}
-          <Route exact path="product/:productID" element={<Products />} />
+          <Route exact path="product/:productID" element={<ProductDetail />} />
         </Routes>
         {/* <ItemListContainer greetings={"Sitio en construcción. Vuelve luego."} /> */}
       </main>

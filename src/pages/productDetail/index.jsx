@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import { Card } from "../../components";
 import "./styles.css";
 
-const Products = () => {
+const ProductDetail = () => {
     const { state } = useLocation();
 
     console.log(state);
@@ -16,4 +16,4 @@ const Products = () => {
     )
 }
 
-export default Products;
+export default ProductDetail;
