@@ -1,0 +1,13 @@
+.product-detail-containter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* flex: 1; */
+    width: fit-content;
+    align-self: center;
+}
+
+.no-click {
+    cursor: default;
+}

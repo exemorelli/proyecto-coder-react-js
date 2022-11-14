@@ -1,15 +1,14 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./styles.css";
-import { Card } from "../../components/index";
+import { Item } from "../../components/index";
 
-const ProductsPage = () => {
+const ItemList = () => {
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState([false]);
 
   const startProduct = useRef(1);
   const endProduct = useRef(10);
 
-  //   const getProducts = async (start = "1", end = "20") => {
   const getProducts = async (start, end) => {
     try {
       setIsLoading(true);
@@ -30,6 +29,7 @@ const ProductsPage = () => {
           description: producto.description,
           price: producto.price,
           category: producto.category,
+          stock: 10,
         };
       });
       setProducts(newProducts);
@@ -48,30 +48,42 @@ const ProductsPage = () => {
   const handleNext = async () => {
     startProduct.current += 10;
     endProduct.current += 10;
-    getProducts(startProduct.current, endProduct.current)
-  }
+    getProducts(startProduct.current, endProduct.current);
+  };
 
   const handlePrevious = async () => {
     startProduct.current -= 10;
     endProduct.current -= 10;
-    getProducts(startProduct.current, endProduct.current)
-  }
+    getProducts(startProduct.current, endProduct.current);
+  };
 
   return (
     <div className="container">
-      <h1>Home</h1>
+      <h1>Productos</h1>
       {isLoading ? (
         <p>Loading...</p>
       ) : (
         <>
           <div className="list-container">
             {products.map((product) => (
-              <Card key={product.id} item={product} />
+              <Item key={product.id} item={product} />
             ))}
           </div>
           <div className="button-container">
-            <button disabled={startProduct.current <=1 || isLoading} onClick={handlePrevious} className="btn-pages">Anterior</button>
-            <button disabled={endProduct.current >=20 || isLoading} onClick={handleNext} className="btn-pages">Siguiente</button>
+            <button
+              disabled={startProduct.current <= 1 || isLoading}
+              onClick={handlePrevious}
+              className="btn-pages"
+            >
+              Anterior
+            </button>
+            <button
+              disabled={endProduct.current >= 20 || isLoading}
+              onClick={handleNext}
+              className="btn-pages"
+            >
+              Siguiente
+            </button>
           </div>
         </>
       )}
@@ -79,4 +91,4 @@ const ProductsPage = () => {
   );
 };
 
-export default ProductsPage;
+export default ItemList;

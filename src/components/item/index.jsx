@@ -3,11 +3,11 @@ import { useNavigate } from "react-router-dom";
 
 import "./styles.css";
 
-const Card = ({ item }) => {
+const Item = ({ item }) => {
   const { id, title, image, price } = item;
   const navigate = useNavigate();
   const handleDetail = () => {
-    navigate(`/product/${id}`, { state: item });
+    navigate(`/products/${id}`, { state: item });
   };
 
   return (
@@ -24,4 +24,4 @@ const Card = ({ item }) => {
   );
 };
 
-export default Card;
+export default Item;

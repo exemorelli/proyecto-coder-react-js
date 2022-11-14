@@ -6,65 +6,17 @@
   text-align: center;
 }
 
-.logo {
-  display: flex;
-  justify-content: flex-start;
-  margin-left: 2%;
-}
-
-.logo-img {
-  height: 75px;
-  padding: 5px;
-}
-
-.navbar {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.nav-container {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.nav-list {
-  display: flex;
-  flex-direction: row;
-  text-decoration: none;
-  justify-content: end;
-}
-
-.nav-list li {
-  list-style: none;
-  margin-right: 20px;
-  color: white;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
-.nav-item {
-  flex-direction: row;
-  text-decoration: none;
-}
-
-.carrodeCompras {
-  margin-right: 2%;
-}
-
-.carritoIcono {
-  width: 3rem;
-  margin-right: 10%;
-}
-
-.backStyle {
-  background: #2a262b;
-  background: linear-gradient(0deg, #2a262b 0%, #19171a 100%);
-  box-shadow: 0px 0px 10px grey; }
-
 .saludo {
   font-size: 50px;
   margin-top: 50px;
   text-transform: uppercase;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* flex: 1; */
+  /* width: fit-content; */
 }
