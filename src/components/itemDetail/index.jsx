@@ -1,25 +1,22 @@
 import React, { useState, useEffect } from "react";
-import { useParams, } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { ItemCount } from "../../components";
 import "./styles.css";
 
 const ItemDetail = () => {
-  
   const { productsID } = useParams();
-  
-  const [product, setProduct] = useState([]);
 
+  const [product, setProduct] = useState([]);
 
   const getProduct = async (id) => {
     try {
-      // setIsLoading(true);
       const promises = [];
-          promises.push(
-          fetch(`https://fakestoreapi.com/products/${id}`).then((res) =>
-            res.json()
-          )
-        );
-      
+      promises.push(
+        fetch(`https://fakestoreapi.com/products/${id}`).then((res) =>
+          res.json()
+        )
+      );
+
       const results = await Promise.all(promises);
       const newProducts = results.map((producto) => {
         return {
@@ -32,7 +29,7 @@ const ItemDetail = () => {
           stock: 10,
         };
       });
-      console.log(newProducts[0])
+      // console.log(newProducts[0])
       setProduct(newProducts[0]);
     } catch (error) {
       console.log(error);
@@ -46,11 +43,9 @@ const ItemDetail = () => {
   // console.log(productsID);
   // console.log("products", product);
 
-
-
   const onAddProduct = (count) => {
-    console.log(`El producto ${product.title} se agregó ${count} veces.`)
-  }
+    console.log(`El producto ${product.title} se agregó ${count} veces.`);
+  };
 
   // console.log(state);
 

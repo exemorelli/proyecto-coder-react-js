@@ -43,7 +43,7 @@ const ItemList = () => {
     getProducts(startProduct.current, endProduct.current);
   }, []);
 
-  console.log("products", products);
+  // console.log("products", products);
 
   const handleNext = async () => {
     startProduct.current += 10;

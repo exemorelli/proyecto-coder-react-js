@@ -35,7 +35,7 @@ const ItemCategory = () => {
           stock: 10,
         };
       });
-      console.log(newProducts);
+      // console.log(newProducts);
       setProducts(newProducts.filter(product=>product.category===categoryName));
     } catch (error) {
       console.log(error);

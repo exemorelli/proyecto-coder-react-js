@@ -9,7 +9,9 @@ export const NavBar = () => {
   return (
     <nav className="navbar backStyle">
       <div className="logo">
-        <img src={logo} className="logo-img" alt="Logo de la empresa"></img>
+        <NavLink to={"/"}>
+          <img src={logo} className="logo-img" alt="Logo de la empresa"></img>
+        </NavLink>
       </div>
       <div className="nav-container">
         <ul className="nav-list">

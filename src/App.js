@@ -3,7 +3,7 @@ import { NavBar } from "./components/navBar";
 // import { NavBar } from "./components";
 
 import { Route, Routes } from "react-router-dom";
-import { Home, ItemListContainer, ItemDetailContainer } from "./pages/index";
+import { Home, ItemListContainer, ItemDetailContainer, Cart } from "./pages/index";
 import { ItemCategory } from "./components/index";
 
 import "./App.css";
@@ -18,6 +18,7 @@ function App() {
           <Route exact path="/products" element={<ItemListContainer />} />
           <Route exact path="/products/:productsID" element={<ItemDetailContainer />} />
           <Route exact path="/category/:categoryName" element={<ItemCategory />} />
+          <Route exact path="/cart" element={<Cart />} />
 
         </Routes>
       </main>
