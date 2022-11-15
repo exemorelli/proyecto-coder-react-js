@@ -20,12 +20,11 @@ export const NavBar = () => {
             <NavLink to={"/products"}>Productos</NavLink>
           </li>
           <li className="nav-item">
-            <NavLink to={"/products"}>men's clothing</NavLink>
+            <NavLink to={"/category/electronics"}>electronics</NavLink>
           </li>
           <li className="nav-item">
-            <NavLink to={"/products"}>jewelery</NavLink>
+            <NavLink to={"/category/jewelery"}>jewelery</NavLink>
           </li>
-          <li className="nav-item">electronics</li>
         </ul>
       </div>
       <div className="carrodeCompras">
